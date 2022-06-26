@@ -1,0 +1,12 @@
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\bin\Debug\net6.0\CardApp.DAL.deps.json
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\bin\Debug\net6.0\CardApp.DAL.dll
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\bin\Debug\net6.0\CardApp.DAL.pdb
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\obj\Debug\net6.0\CardApp.DAL.csproj.AssemblyReference.cache
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\obj\Debug\net6.0\CardApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\obj\Debug\net6.0\CardApp.DAL.AssemblyInfoInputs.cache
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\obj\Debug\net6.0\CardApp.DAL.AssemblyInfo.cs
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\obj\Debug\net6.0\CardApp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\obj\Debug\net6.0\CardApp.DAL.dll
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\obj\Debug\net6.0\refint\CardApp.DAL.dll
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\obj\Debug\net6.0\CardApp.DAL.pdb
+C:\Users\zheny\source\repos\CardApp\CardApp.DAL\obj\Debug\net6.0\ref\CardApp.DAL.dll

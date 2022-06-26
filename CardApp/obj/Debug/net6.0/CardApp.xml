@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CardApp</name>
+    </assembly>
+    <members>
+        <member name="M:CardApp.Controllers.CardController.GetAllCardsCategoryByOwner(System.Int64,System.String)">
+            <summary>
+            Получение всех карточек определенной категории пользователя.
+            </summary>
+            <param name="ownerId"></param>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardApp.Controllers.CardController.CreateCard(System.Int64,System.String,CardApp.BLL.Contracts.CardDTO)">
+            <summary>
+            Создание карточки определенной категории.
+            </summary>
+            <param name="ownerId"></param>
+            <param name="category"></param>
+            <param name="cardDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardApp.Controllers.CategoryController.CreateCategory(CardApp.BLL.Contracts.CategoryDTO,System.Int64)">
+            <summary>
+            Создание новой категории.
+            </summary>
+            <param name="categoryDTO"></param>
+            <param name="ownerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardApp.Controllers.CategoryController.DeleteCategory(CardApp.BLL.Contracts.CategoryDTO,System.Int64)">
+            <summary>
+            Удаление категории.
+            </summary>
+            <param name="categoryDTO"></param>
+            <param name="ownerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardApp.Controllers.CategoryController.GetCategoriesByOwner(System.Int64)">
+            <summary>
+            Получение всех категорий пользователя.
+            </summary>
+            <param name="ownerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardApp.Controllers.UserController.Login(CardApp.BLL.Contracts.LoginModel)">
+            <summary>
+            Аутенфикация пользователя и выдача токена.
+            </summary>
+            <param name="loginModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CardApp.Controllers.UserController.Registration(CardApp.BLL.Contracts.RegistrationModel)">
+            <summary>
+            Регистрация пользователя.
+            </summary>
+            <param name="registrationModel"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

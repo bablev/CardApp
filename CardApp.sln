@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardApp", "CardApp\CardApp.csproj", "{15F46720-9A74-4A19-8152-E00DA33971DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardApp.BLL", "CardApp.BLL\CardApp.BLL.csproj", "{FD1F9420-43A0-4F57-8FCD-60C4E369FEC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardApp.DAL", "CardApp.DAL\CardApp.DAL.csproj", "{66512BF8-4C0E-48E1-920D-0D73579105AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15F46720-9A74-4A19-8152-E00DA33971DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F46720-9A74-4A19-8152-E00DA33971DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F46720-9A74-4A19-8152-E00DA33971DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F46720-9A74-4A19-8152-E00DA33971DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD1F9420-43A0-4F57-8FCD-60C4E369FEC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD1F9420-43A0-4F57-8FCD-60C4E369FEC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD1F9420-43A0-4F57-8FCD-60C4E369FEC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD1F9420-43A0-4F57-8FCD-60C4E369FEC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66512BF8-4C0E-48E1-920D-0D73579105AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66512BF8-4C0E-48E1-920D-0D73579105AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66512BF8-4C0E-48E1-920D-0D73579105AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66512BF8-4C0E-48E1-920D-0D73579105AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2ECA3BBE-D1B4-4985-9EAB-DC44BC515252}
+	EndGlobalSection
+EndGlobal
