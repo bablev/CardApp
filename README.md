@@ -1,5 +1,5 @@
 # CardApp
-CardApp - это мой учебный проект, Restful API системы карточек для изучения английского языка c 3-tier архитектурой.
+CardApp - это мой учебный проект, Restful API система карточек для изучения английского языка c 3-tier архитектурой.
 
 Технологии, которые использовались при разработке: ASP.NET CORE WEB API, ASP.NET CORE Identity, MS SQL SERVER, 
 EF Core, Automapper, Swashbuckle, NLog.
