@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CardApp.BLL.Contracts;
+using CardApp.BLL.Exceptions;
 using CardApp.DAL.Contracts;
 using CardApp.DAL.Models;
 using Microsoft.AspNetCore.Identity;
@@ -40,7 +41,7 @@ namespace CardApp.BLL.Services
             var categoryObj = _categoryRepository.GetCategoryByName(category);
             if (user == null)
             {
-                // Handling exception
+                throw new UserNotFoundException("The owner wasn't found when creating the card");
             }
             card.OwnerId = user.Id;
             card.Category = categoryObj;
@@ -53,26 +54,36 @@ namespace CardApp.BLL.Services
             var card = await _cardRepository.GetByIdAsync(cardId);
             if (card is null)
             {
-                // Handling exception
+                throw new CardNotFoundException("The card wasn't found when deleting it");
             }
 
             var owner = await _userManager.FindByIdAsync(ownerId.ToString());
             if (owner is null)
             {
-                // Handling exception
+                throw new UserNotFoundException("The owner wasn't found when deleting the card");
             }
 
             if (card.Id != owner.Id)
             {
-                // Handling exception
+                throw new CardNotBelongToUserException("The card doesn't belong to the specific user");
             }
 
             await _cardRepository.Remove(card);
         }
 
         public async Task<IEnumerable<CardDTO>> GetCardsByCategoryAsync(long ownerId, string category)
-        {   
+        {
+            
             var cards = await _cardRepository.GetAllByCategoryAsync(ownerId, category);
+            var owner = await _userManager.FindByIdAsync(ownerId.ToString());
+            if (owner is null)
+            {
+                throw new UserNotFoundException("The owner wasn't found");
+            }
+            if (owner.Id != cards?.FirstOrDefault()?.OwnerId)
+            {
+                throw new CardNotBelongToUserException("The card doesn't belong to the specific user");
+            }
             var cardsDto = _mapper.Map<List<CardDTO>>(cards);
             return cardsDto;
         }

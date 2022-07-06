@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CardApp.BLL.Contracts;
+using CardApp.BLL.Exceptions;
 using CardApp.DAL.Contracts;
 using CardApp.DAL.Models;
 using Microsoft.AspNetCore.Identity;
@@ -29,7 +30,7 @@ namespace CardApp.BLL.Services
             var user = await _userManager.FindByIdAsync(ownerId.ToString());
             if (user == null)
             {
-                // Handling exception
+                throw new UserNotFoundException("USER NOT FOUND!");
             }
             var category = _mapper.Map<Category>(categoryDTO);
             category.Owner = user;
@@ -40,7 +41,7 @@ namespace CardApp.BLL.Services
             var user = await _userManager.FindByIdAsync(ownerId.ToString());
             if (user == null)
             {
-                // Handling exception
+                throw new UserNotFoundException("User not found for delete category");
             }
             var category = _mapper.Map<Category>(categoryDTO);
             category.Owner = user;
@@ -51,7 +52,7 @@ namespace CardApp.BLL.Services
             var user = await _userManager.FindByIdAsync(ownerId.ToString());
             if (user == null)
             {
-                // Handling exception
+                throw new UserNotFoundException("User not found!!!");
             }
             var categories = _categoryRepository.GetAllByOwner(ownerId);
             var categoriesDTO = _mapper.Map<List<CategoryDTO>>(categories);

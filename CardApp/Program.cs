@@ -4,6 +4,7 @@ using CardApp.DAL.Contracts;
 using CardApp.DAL.Data;
 using CardApp.DAL.Implementation;
 using CardApp.DAL.Models;
+using CardApp.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -81,13 +82,14 @@ try
     builder.Host.UseNLog();
     var app = builder.Build();
     // Configure the HTTP request pipeline.
+    app.ConfigureCustomExceptionMiddleware();
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-
     app.UseHttpsRedirection();
+    app.UseAuthentication();
     app.UseAuthorization();
     app.MapControllers();
     app.Run();

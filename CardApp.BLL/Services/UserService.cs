@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CardApp.BLL.Contracts;
+using CardApp.BLL.Exceptions;
 using CardApp.DAL.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -61,8 +62,10 @@ namespace CardApp.BLL.Services
             var user = _mapper.Map<AppUser>(registrationModel);
             if (user == null)
             {
-                // Handling exception
+                throw new UserNotFoundException("User not found!");
             }
+            PasswordHasher<AppUser> ph = new PasswordHasher<AppUser>();
+            user.PasswordHash = ph.HashPassword(user, registrationModel.Password);
             await _userManager.CreateAsync(user);
         }
     }

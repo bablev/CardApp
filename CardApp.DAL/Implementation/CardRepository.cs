@@ -36,7 +36,7 @@ namespace CardApp.DAL.Implementation
 
         public async Task<ICollection<Card>> GetAllByCategoryAsync(long id, string category)
         {
-            var cards = _context.Cards.Where(c => c.Category.Name == category).ToList();
+            var cards = _context.Cards.Where(c => c.Category.Name == category && c.OwnerId == id).ToList();
             return cards;
         }
     }
